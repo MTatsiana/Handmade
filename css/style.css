@@ -1,0 +1,286 @@
+body {
+  font-family: Georgia, serif;
+  color: #444;
+  /*font-size: 18px;*/
+  min-width: 700px; /*задание минимальной ширины страницы*/
+}
+#index {
+  background: url("../img/fon.png") #fff;
+}
+#directions {
+  background: url("../img/fon_b.png") #fff;
+}
+#gallery {
+  background: url("../img/fon_f.png") #fff;
+}
+#articles {
+  background: url("../img/fon_o.png") #fff;
+}
+#contacts {
+  background: url("../img/fon_g.png") #fff;
+}
+
+/*-------------*/
+/*----ШАПКА----*/
+
+/*относительное позиционирование родительского контейнера*/
+.header {
+  position: relative;
+  height: 150px;  /*фиксирование высоты*/
+}
+/*абсолютное позиционирование дочерних контейнеров*/
+.header div {
+  position: absolute;
+  color: #614d42;
+}
+/*--Колонка1--Логотип--*/
+/*--фиксированная ширина*/
+.hcol1 {
+  width: 240px;
+}
+.hcol1 img {
+  padding: 10px 10px 0 20px;
+  width: 85%;
+}
+/*--Колонка2--Название--*/
+/*--резиновая ширина--*/
+.hcol2 {
+  left: 240px;  /*привязка к правому краю колонки1*/
+  right: 130px; /*и к левому краю колонки3*/
+}
+.hcol2 p {
+  margin: 0;
+  padding: 50px 10px 0 0;
+  font-size: 46px;
+  letter-spacing: 0.1em;
+  text-shadow: 1px 1px 3px #f58f8f;
+  text-align: center;
+  text-transform: uppercase;
+}
+/*--колонка3--Телефон--*/
+/*--фиксированная ширина--*/
+.hcol3 {
+  width: 130px;
+  right: 0;  /*привязка к правому краю*/
+  /*border: 1px solid black;*/
+}
+.hcol3 p {
+  font-size: 16px;
+  margin: 0;
+  padding: 50px 5px 0 15px;
+}
+
+/*--------------------*/
+/*----ГЛАВНОЕ МЕНЮ----*/
+
+/*--Фон и верхняя, нижняя кромки контейнера меню--*/
+.nav {
+  background-image: url("../img/nav_fon.png");
+  border-top: 2px solid #7b6a58;
+  border-bottom: 2px solid #7b6a58;
+}
+.nav>ul {
+  position: relative;
+  padding-left: 25px;
+}
+.nav>ul li {
+  display: inline-block;
+}
+
+/*вертикальное обрамление пунктов главного меню*/
+.nav>ul li {
+  border-right: 1px dashed #614d42;
+}
+.nav>ul li:first-child {
+  border-left: 1px dashed #614d42;
+}
+.nav>ul li:last-child {
+  border-right: 1px dashed #614d42;
+}
+/* настраиваем вид пунктов главного меню*/
+.nav>ul li a {
+  display: block; /*ссылка ведёт себя как блок*/
+  padding: 15px 20px 15px 20px;
+  color: #614d42;
+  font-weight: 600;
+  /*text-shadow: 1px 1px 1px black;  гавно*/
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease; /*задержка в отображении*/
+}
+/* задаем обработчик наведения мыши*/
+.nav li a:hover {
+  background: #7d6b57;
+  color: #ffffff;
+  box-shadow: 1px 5px 10px -5px black;
+  transition: all 0.2s ease;
+}
+
+/*----Подменю----*/
+.nav li ul {
+  position: absolute;
+  min-width: 170px;
+  display: none;
+}
+/* обрамление пунктов подменю */
+.nav li>ul li {
+  border-bottom: 1px solid #614d42;
+  border-left: 1px solid #614d42;
+  border-right: 1px solid #614d42;
+}
+.nav li>ul li:first-child {
+  border-left: 1px solid #614d42;
+}
+.nav li>ul li:last-child {
+  border-right: 1px solid #614d42;
+}
+/* изменяем жирность текста и фон подменю*/
+.nav li>ul li a {
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  background-image: url("../img/nav_fon_inv.png");
+}
+/* задаем обработчики наведения мыши*/
+.nav li:hover ul {
+  display: block; /*показывает подменю*/
+}
+.nav li:hover ul>li {
+  display: block; /*размещает пункты подменю вертикально*/
+}
+
+/*--------------------*/
+/*---- ПРОМО-БЛОК ----*/
+.promo {
+  /*position: relative;*/
+  height: 80px;  /*фиксирование высоты*/
+  background: url("../img/promo_fon2.png") repeat-x;
+  /*border-top: 1px solid #7b6a58;
+  border-bottom: 1px solid #7b6a58;*/
+  margin-top: 10px;
+}
+.promo h2 {
+  text-align: center;
+  padding-top: 24px;
+  color: #614d42;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.1em;
+  text-shadow: 2px 2px 4px #fff;
+}
+.promo a {
+  background: url("../img/promo_fon.png") left;
+  text-decoration: none;
+  color: #614d42;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-shadow: 2px 2px 4px #fff;
+  padding: 10px 20px 15px 20px;
+  margin-left: 20px;
+  border: 2px solid #7b6a58;
+  border-radius: 30px;
+}
+.promo a:hover {
+  text-shadow: 2px 2px 4px #ffee00;
+  border: 2px dashed #614d42;
+}
+
+/*--------------------*/
+/*---- TITLE-БЛОК ----*/
+h1 {
+  font-size: 24px;
+  /*font-weight: 400;*/
+  line-height: 1.4;
+  margin: 24px 18px 24px 18px;
+}
+
+/*-----------------------*/
+/*---- ОСНОВНОЙ-БЛОК ----*/
+h2 {
+  font-size: 20px;
+  margin: 0 18px 18px 18px;
+}
+p {
+  font-size: 18px;
+  margin: 0 18px 18px 18px;
+}
+p span {
+  text-shadow: 1px 1px 2px #f58f8f;
+}
+/*абзацы с картинкой*/
+.ppic {
+  overflow: hidden;
+}
+/*картинка по правому краю*/
+p img.imgr {
+  float: right;
+  margin: 8px 0 0 8px;
+  padding: 4px;
+  border: 2px dashed #7b6a58;
+  background: #d9d7be;
+}
+/*картинка по левому краю*/
+p img.imgl {
+  float: left;
+  margin: 8px 8px 0 0;
+  padding: 4px;
+  border: 2px dashed #7b6a58;
+  background: #d9d7be;
+}
+
+/*----------------*/
+/*---- ПОДВАЛ ----*/
+
+/*относительное позиционирование родительского контейнера*/
+.footer {
+  position: relative;
+  height: 60px;  /*фиксирование высоты*/
+  background: url("../img/nav_fon.png") repeat;
+  border-top: 2px dashed #7b6a58;
+  border-bottom: 2px dashed #7b6a58;
+  margin: 40px 0 40px 0;
+}
+/*абсолютное позиционирование дочерних контейнеров*/
+.footer div {
+  position: absolute;
+  color: #614d42;
+}
+/*--Колонка1--Логотип--*/
+/*--фиксированная ширина*/
+.fcol1 {
+  width: 180px;
+  height: 60px;/*дублируем высоту - Хром глючит*/
+}
+.fcol1 img {
+  padding: 0 10px 0 20px;
+  height: 170%;
+  margin-top: -20px;
+}
+/*--Колонка2--Название--*/
+/*--резиновая ширина--*/
+.fcol2 {
+  left: 180px;  /*привязка к правому краю колонки1*/
+  right: 160px; /*и к левому краю колонки3*/
+}
+.fcol2 p {
+  margin: 0;
+  padding: 8px 10px 0 5px;
+  font-size: 13px;
+  color: #444;
+  text-align: left;
+  /*text-transform: uppercase;*/
+}
+/*--колонка3--Телефон--*/
+/*--фиксированная ширина--*/
+.fcol3 {
+  width: 160px;
+  right: 0;  /*привязка к правому краю*/
+  /*border: 1px solid black;*/
+}
+.fcol3 p {
+  font-size: 16px;
+  margin: 0;
+  padding: 10px 5px 0 15px;
+}
